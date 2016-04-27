@@ -25,7 +25,7 @@ class ValidatePasswordFactory extends AbstractValidatePasswordFactory
     {
         parent::__construct();
         $this->addValidator(static::VALIDATOR_ADMIN, new ValidateAdminPassword());
-        $this->addValidator(static::VALIDATOR_USER, new ValidateUserPassword());
+        $this->addValidator(static::VALIDATOR_USER, new ValidateCommonPassword());
     }
 
     /**

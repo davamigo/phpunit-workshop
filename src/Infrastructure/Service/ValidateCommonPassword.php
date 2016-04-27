@@ -12,13 +12,13 @@ use Domain\Service\ValidatePasswordInterface;
  * @package Infrastructure\Service
  * @author David Amigo <davamigo@gmail.com>
  */
-class ValidateUserPassword implements ValidatePasswordInterface
+class ValidateCommonPassword implements ValidatePasswordInterface
 {
     const PASSWORD_MIN_LENGTH = 6;
     const PASSWORD_MAX_LENGTH = 20;
     const PASSWORD_REGEX_TEST = '/((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{@MIN,@MAX})/';
     const PASSWORD_REGEX_CHARS = '/^[a-zA-Z0-9@CHARS]+$/';
-    const PASSWORD_SPECIAL_CHARS = '=-_*$%';
+    const PASSWORD_SPECIAL_CHARS = '_-+*=$%#!?';
 
     /**
      * Validates a password for non-admin user
@@ -77,6 +77,13 @@ class ValidateUserPassword implements ValidatePasswordInterface
         }
     }
 
+    /**
+     * Validates the special chars in the password
+     *
+     * @param $password
+     * @return void
+     * @throws InvalidPasswordException
+     */
     protected function validateSpecialChars($password)
     {
         $chars = '\\' . implode('\\', str_split(static::PASSWORD_SPECIAL_CHARS));

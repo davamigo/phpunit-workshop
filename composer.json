@@ -1,0 +1,32 @@
+{
+    "name": "davamigo/phpunit-test",
+    "description": "Learning PHPUnit project",
+    "type": "project",
+    "keywords": [
+        "phpunit"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Amigo",
+            "email": "davamigo@gmail.com",
+            "role": "lead"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpunit/phpunit": "~4"
+    },
+    "config": {
+        "bin-dir": "bin/",
+        "platform": {
+            "php": "5.3.3"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/",
+            "Test\\": "test/"
+        }
+    }
+}

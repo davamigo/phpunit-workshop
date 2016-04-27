@@ -25,7 +25,7 @@ In the future there could be more kind of users (like power user, auditor, ...).
     * There are some forbidden words that can't appear in the password.
 
 ### Notes
-* The valid symbols are: `=`, `-`, `_`, `*`, `$`, `%`.
+* The valid symbols are: `_`, `-`, `+`, `*`, `=`, `$`, `%`, `#`, `!`, `?`.
 * The forbidden words are:
     * password
     * passw0rd

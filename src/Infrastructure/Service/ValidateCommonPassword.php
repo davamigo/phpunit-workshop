@@ -93,7 +93,7 @@ class ValidateCommonPassword implements ValidatePasswordInterface
         $result = preg_match($pattern, $password);
         if (!$result) {
             throw new InvalidPasswordException(
-                'The password can only hace lower case letters, upper case letters, numbers and some special chars:' .
+                'The password can only hace lower case letters, upper case letters, numbers and some special chars: ' .
                 static::PASSWORD_SPECIAL_CHARS
             );
         }

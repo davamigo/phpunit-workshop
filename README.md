@@ -17,7 +17,6 @@ $ composer update
 ```
 $ bin/phpunit
 ```
- 
 
 ## Branches
 * **master**

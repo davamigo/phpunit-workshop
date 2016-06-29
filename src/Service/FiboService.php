@@ -13,16 +13,17 @@ class FiboService
 {
     public function fibo($term)
     {
+        if ($term < 1) {
+            throw new InvalidParameterException();
+        }
+
         switch ($term) {
             case 1:
             case 2:
                 return 1;
 
-            case 10:
-                return 55;
-
             default:
-                throw new InvalidParameterException();
+                return $this->fibo($term - 1) + $this->fibo($term - 2);
         }
     }
 }

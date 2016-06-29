@@ -2,6 +2,8 @@
 
 namespace Test\Unit;
 
+use Service\FiboService;
+
 /**
  * Class FibonacciServiceTest
  *
@@ -52,7 +54,7 @@ class FibonacciServiceTest extends  \PHPUnit_Framework_TestCase
     {
         $fb = new FiboService();
 
-        $this->setExpectedException('InvalidParameterException');
+        $this->setExpectedException('Exception\InvalidParameterException');
 
         $fb->fibo(0);
     }
@@ -64,7 +66,7 @@ class FibonacciServiceTest extends  \PHPUnit_Framework_TestCase
     {
         $fb = new FiboService();
 
-        $this->setExpectedException('InvalidParameterException');
+        $this->setExpectedException('Exception\InvalidParameterException');
 
         $fb->fibo(-1);
     }
